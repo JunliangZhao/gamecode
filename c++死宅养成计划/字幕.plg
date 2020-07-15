@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 字幕 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\zjl\AppData\Local\Temp\RSPB908.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/字幕.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp"
+]
+Creating command line "cl.exe @C:\Users\zjl\AppData\Local\Temp\RSPB908.tmp" 
+<h3>Output Window</h3>
+Compiling...
+字幕.cpp
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2983) : error C2061: syntax error : identifier 'so'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2984) : error C2065: 'background1' : undeclared identifier
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2984) : error C2501: 'putimage' : missing storage-class or type specifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2984) : error C2373: 'putimage' : redefinition; different type modifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2984) : error C2078: too many initializers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2984) : error C2440: 'initializing' : cannot convert from 'int *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2985) : error C2065: 'person2' : undeclared identifier
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2985) : error C2501: 'putimage' : missing storage-class or type specifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2985) : error C2373: 'putimage' : redefinition; different type modifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2985) : error C2078: too many initializers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2986) : error C2065: 'person1' : undeclared identifier
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2986) : error C2501: 'putimage' : missing storage-class or type specifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2986) : error C2373: 'putimage' : redefinition; different type modifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2986) : error C2078: too many initializers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2987) : error C2065: 'd' : undeclared identifier
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2987) : error C2501: 'zimu' : missing storage-class or type specifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2987) : error C2373: 'zimu' : redefinition; different type modifiers
+        C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(330) : see declaration of 'zimu'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2987) : error C2078: too many initializers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2987) : error C2440: 'initializing' : cannot convert from 'char *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2988) : error C2501: 'FlushConsoleInputBuffer' : missing storage-class or type specifiers
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2988) : error C2373: 'FlushConsoleInputBuffer' : redefinition; different type modifiers
+        d:\microsoft visual studio\vc98\include\wincon.h(514) : see declaration of 'FlushConsoleInputBuffer'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2988) : error C2440: 'initializing' : cannot convert from 'void *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2990) : error C2143: syntax error : missing ';' before 'if'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2991) : error C2143: syntax error : missing ';' before '{'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(2991) : error C2447: missing function header (old-style formal list?)
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3010) : error C2143: syntax error : missing ';' before 'if'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3011) : error C2143: syntax error : missing ';' before '{'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3011) : error C2447: missing function header (old-style formal list?)
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3030) : error C2143: syntax error : missing ';' before 'if'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3032) : error C2143: syntax error : missing ';' before '{'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3032) : error C2447: missing function header (old-style formal list?)
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3051) : error C2143: syntax error : missing ';' before 'if'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3052) : error C2143: syntax error : missing ';' before '{'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3052) : error C2447: missing function header (old-style formal list?)
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3095) : error C2143: syntax error : missing ';' before '}'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3095) : error C2143: syntax error : missing ';' before '}'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3095) : error C2143: syntax error : missing ';' before '}'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3097) : error C2143: syntax error : missing ';' before '{'
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(3097) : error C2447: missing function header (old-style formal list?)
+C:\Users\zjl\Desktop\常规课堂\c++死宅养成计划\字幕.cpp(5161) : error C2065: 'dcyuyan' : undeclared identifier
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+字幕.obj - 40 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

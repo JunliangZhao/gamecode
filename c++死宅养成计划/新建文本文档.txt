@@ -1,0 +1,112 @@
+宅值
+情商
+退学率
+压力
+SRTP
+钱
+
+int Game(int n)																	//------游戏界面
+{
+	setbkcolor(WHITE);
+	cleardevice();
+	IMAGE kaoshiperson;
+	loadimage(&kaoshiperson,_T("图片\\熊猫人2.jpg"),180,180,true);
+	settextstyle(20,0,_T("微软雅黑"));
+	setbkcolor(BLACK);
+	settextcolor(WHITE);
+	outtextxy(100, 400, "【绿色】");
+	outtextxy(100, 440, "【紫色】");
+	outtextxy(100, 480, "【红色】");
+	outtextxy(150, 400, "表示位置和数字都正确；");
+	outtextxy(150, 440, "表示数字正确但位置不正确；");
+	outtextxy(150, 480, "表示数字不正确。");
+
+	Button(80, 50, 420, 100, 105, 60, "请继续答题");
+	Button(290, 310, 410, 360, 325, 320, "提交");
+	
+	putimage(500,300,&kaoshiperson);
+
+	int turn = 0, player[10] = {0}, system[10] = {0};
+	Random(system, 10);
+	for(int i = 0; i < n; i++)
+	{
+		Button(80 + 70*(i%5), 150 + 70*(i/5), 130 + 70*(i%5), 200 + 70*(i/5), 100 + 70*(i%5), 160 + 70*(i/5), player[i]+48);
+	}
+
+	MOUSEMSG m;
+	int inFlag = 1, outFlag = 0;
+	while(1)
+	{
+		m = GetMouseMsg();
+		 if(m.x >= 290 && m.x <= 410 && m.y >= 310 && m.y <= 360)			//提交按钮
+		{
+			if(inFlag)
+			{
+				outFlag = 1;
+				inFlag = 0;
+				Button(290, 310, 410, 360, 325, 320, "提交", 1);
+			}
+			if(m.uMsg == WM_LBUTTONDOWN)
+			{
+				turn++;
+				Check(system, player, n, turn);
+				if(Judge(system, player, n))
+				{
+					Button(80, 50, 420, 100, 105, 60, "你答对了！");
+
+					break;
+				}
+				if(turn == 8)
+				{
+					Button(80, 50, 420, 100, 105, 60, "很遗憾，挂科了。答案是：");
+					for(i = 0; i < n; i++)
+					{
+						Button(80 + 70*(i%5), 150 + 70*(i/5), 130 + 70*(i%5), 200 + 70*(i/5), 100 + 70*(i%5), 160 + 70*(i/5), system[i]+48);
+					}
+					break;
+				}
+			}
+		}
+		else if((getpixel(m.x, m.y) == BLUE || getpixel(m.x, m.y) == LIGHTBLUE) && m.y > 100)		//选择数字区域
+		{
+			int t = (m.x-80)/70 + (m.y-150)/70*5;
+			if(inFlag)
+			{
+				outFlag = 1;
+				inFlag = 0;
+				Button(80 + 70*(t%5), 150 + 70*(t/5), 130 + 70*(t%5), 200 + 70*(t/5), 100 + 70*(t%5), 160 + 70*(t/5), player[t]+48, 1);
+			}
+			if(m.uMsg == WM_LBUTTONDOWN)
+			{
+				Button(80, 50, 420, 100, 105, 60, "输入一个数字");
+				while(kbhit())getch();		//清除键盘缓存
+				int key = getch();
+				player[t] = key>47 && key<58 ? key-48 : player[t];
+				Button(80 + 70*(t%5), 150 + 70*(t/5), 130 + 70*(t%5), 200 + 70*(t/5), 100 + 70*(t%5), 160 + 70*(t/5), player[t]+48, 1);
+				Button(80, 50, 420, 100, 105, 60, "猜猜看吧");
+			}
+		}
+		else if(outFlag)
+		{
+			outFlag = 0;
+			inFlag = 1;
+			Button(290, 310, 410, 360, 325, 320, "提交");
+			for(int i = 0; i < n; i++)
+			{
+				Button(80 + 70*(i%5), 150 + 70*(i/5), 130 + 70*(i%5), 200 + 70*(i/5), 100 + 70*(i%5), 160 + 70*(i/5), player[i]+48);
+			}
+		}
+	}
+	Button(290, 310, 410, 360, 325, 320, "提交");
+	while(1)																	//---结果判定后的界面
+	{
+		m = GetMouseMsg();
+
+		 if(outFlag)
+		{
+			outFlag = 0;
+			inFlag = 1;
+
+		}
+	}
+}
